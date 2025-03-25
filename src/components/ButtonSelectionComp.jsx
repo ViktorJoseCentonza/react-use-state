@@ -1,23 +1,5 @@
-// import { useState } from 'react'
-
-// export default function ButtonSelectionComp(props) {
-//     cibst [button,setButtonActive] = useState(false);
-//     return (
-//         <>
-//             {props.ButtonData.map((object) => (
-
-//                 <button key={`buttonSelect-${object.id}`} className={object.isOn ? "enabled" : "disabled"} onClick={() => object.isOn = !object.isOn}>{object.title}</button>
-
-
-
-//             ))}
-//         </>
-//     )
-// }
-
-
 import { useState } from 'react';
-
+import CardRenderer from './CardRenderer'
 export default function ButtonSelectionComp(props) {
     const [buttonStates, setButtonActive] = useState(
         props.ButtonData.map(object => object.isOn)
@@ -41,6 +23,10 @@ export default function ButtonSelectionComp(props) {
                     {object.title}
                 </button>
             ))}
+
+            <CardRenderer data={props.ButtonData} buttonStates={buttonStates} />
+
         </>
     );
 }
+
