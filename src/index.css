@@ -85,10 +85,26 @@ button:focus-visible {
   display: flex;
 }
 
-.disabled {
-  background-color: grey;
+.button-holder {
+  gap: 1rem;
+  padding: 2rem 0 0 2rem;
+
+  .disabled {
+    background-color: rgb(1, 96, 204);
+  }
+
+  .enabled {
+    background-color: rgb(221, 181, 0);
+    color: black;
+  }
+
 }
 
-.enabled {
-  background-color: yellow;
+.card {
+  padding: 0 2rem;
+  margin: 2rem 0 0 2rem;
+  display: inline-block;
+  background-color: #646cff;
+  border: 2px solid grey;
+  border-radius: 20px;
 }
